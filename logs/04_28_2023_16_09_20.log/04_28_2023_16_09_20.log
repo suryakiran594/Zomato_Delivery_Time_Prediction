@@ -1,0 +1,16 @@
+[ 2023-04-28 16:09:24,391 ] 186 werkzeug - WARNING -  * Debugger is active!
+[ 2023-04-28 16:09:24,432 ] 186 werkzeug - INFO -  * Debugger PIN: 122-246-193
+[ 2023-04-28 16:10:06,160 ] 186 werkzeug - INFO - 127.0.0.1 - - [28/Apr/2023 16:10:06] "GET / HTTP/1.1" 200 -
+[ 2023-04-28 16:10:19,868 ] 186 werkzeug - INFO - 127.0.0.1 - - [28/Apr/2023 16:10:19] "GET /Time HTTP/1.1" 200 -
+[ 2023-04-28 16:10:22,508 ] 186 werkzeug - INFO - 127.0.0.1 - - [28/Apr/2023 16:10:22] "[35m[1mPOST /Time HTTP/1.1[0m" 500 -
+[ 2023-04-28 16:10:22,553 ] 186 werkzeug - INFO - 127.0.0.1 - - [28/Apr/2023 16:10:22] "[36mGET /Time?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[ 2023-04-28 16:10:22,554 ] 186 werkzeug - INFO - 127.0.0.1 - - [28/Apr/2023 16:10:22] "[36mGET /Time?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[ 2023-04-28 16:10:22,681 ] 186 werkzeug - INFO - 127.0.0.1 - - [28/Apr/2023 16:10:22] "[36mGET /Time?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2023-04-28 16:10:22,724 ] 186 werkzeug - INFO - 127.0.0.1 - - [28/Apr/2023 16:10:22] "[36mGET /Time?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2023-04-28 16:21:46,891 ] 186 werkzeug - INFO - 127.0.0.1 - - [28/Apr/2023 16:21:46] "GET /Time HTTP/1.1" 200 -
+[ 2023-04-28 16:22:00,267 ] 186 werkzeug - INFO - 127.0.0.1 - - [28/Apr/2023 16:22:00] "[35m[1mPOST /Time HTTP/1.1[0m" 500 -
+[ 2023-04-28 16:22:00,320 ] 186 werkzeug - INFO - 127.0.0.1 - - [28/Apr/2023 16:22:00] "[36mGET /Time?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[ 2023-04-28 16:22:00,320 ] 186 werkzeug - INFO - 127.0.0.1 - - [28/Apr/2023 16:22:00] "[36mGET /Time?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[ 2023-04-28 16:22:00,464 ] 186 werkzeug - INFO - 127.0.0.1 - - [28/Apr/2023 16:22:00] "[36mGET /Time?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2023-04-28 16:22:00,494 ] 186 werkzeug - INFO - 127.0.0.1 - - [28/Apr/2023 16:22:00] "[36mGET /Time?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[ 2023-04-28 16:22:55,367 ] 186 werkzeug - INFO -  * Detected change in 'C:\\Zomato_Delivery_Prediction\\app.py', reloading

@@ -26,7 +26,9 @@ class DataTransformation:
             logging.info('Data Transformation initiated')
             # Define which columns should be ordinal-encoded and which should be scaled
             categorical_cols = ['Weather_conditions', 'Road_traffic_density','City']
-            numerical_cols = ['Delivery_person_Ratings', 'Type_of_order','Festival']
+            numerical_cols = ['Delivery_person_Age','Delivery_person_Ratings','Restaurant_latitude','Restaurant_longitude','Delivery_location_latitude',
+                  'Delivery_location_longitude','Vehicle_condition']
+
             
             # Define the custom ranking for each ordinal variable
             Weather_conditions = ['Fog', 'Stormy', 'Sandstorms','Windy','Cloudy','Sunny']
@@ -45,19 +47,11 @@ class DataTransformation:
 
             )
 
-            # Categorigal Pipeline
-            cat_pipeline=Pipeline(
-                steps=[
-                ('imputer',SimpleImputer(strategy='most_frequent')),
-                ('ordinalencoder',OrdinalEncoder(categories=[Weather_conditions,Road_traffic_density,City])),
-                ('scaler',StandardScaler())
-                ]
-
-            )
+            
 
             preprocessor=ColumnTransformer([
             ('num_pipeline',num_pipeline,numerical_cols),
-            ('cat_pipeline',cat_pipeline,categorical_cols)
+        
             ])
             
             return preprocessor
@@ -82,8 +76,8 @@ class DataTransformation:
 
             preprocessing_obj = self.get_data_transformation_object()
 
-            target_column_name = 'price'
-            drop_columns = [target_column_name,'id']
+            target_column_name = 'Time_taken (min)'
+            drop_columns = [target_column_name,'Time_taken (min)']
 
             input_feature_train_df = train_df.drop(columns=drop_columns,axis=1)
             target_feature_train_df=train_df[target_column_name]

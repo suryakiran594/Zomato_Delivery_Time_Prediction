@@ -29,41 +29,47 @@ class PredictPipeline:
             raise CustomException(e,sys)
         
 class CustomData:
-    def __init__(self,
-                 Delivery_person_Ratings:float,
-                 Type_of_order:int,
-                 Festival:int,
-        
+    def __init__(self,                 
+                 Delivery_person_Age:int,
+                 Delivery_person_Ratings:int,
+                 Restaurant_latitude:float,
+                 Restaurant_longitude:float,
+                 Delivery_location_latitude:float,
+                 Delivery_location_longitude:float,
+                 Vehicle_condition:float,
                  Weather_conditions:str,
                  Road_traffic_density:str,
                  City:str):
         
+        self.Delivery_person_Age=Delivery_person_Age
+        self.Delivery_person_Ratings=Delivery_person_Ratings
+        self.Restaurant_latitude=Restaurant_latitude
+        self.Restaurant_longitude=Restaurant_longitude
+        self.Delivery_location_latitude=Delivery_location_latitude
+        self.Delivery_location_longitude=Delivery_location_longitude
+        self.Vehicle_condition=Vehicle_condition
         self.Weather_conditions=Weather_conditions
         self.Road_traffic_density=Road_traffic_density
         self.City=City
-        self.x=x
-        self.y=y
-        self.z=z
-        self.Weather_conditions = Weather_conditions
-        self.Road_traffic_density = Road_traffic_density
-        self.City = City
 
     def get_data_as_dataframe(self):
         try:
             custom_data_input_dict = {
-                'Weather_conditions':[self.Weather_conditions],
-                'Road_traffic_density':[self.Road_traffic_density],
-                'City':[self.City],
-                'x':[self.x],
-                'y':[self.y],
-                'z':[self.z],
+                'Delivery_person_Age':[self.Delivery_person_Age],
+                'Delivery_person_Ratings':[self.Delivery_person_Ratings],
+                'Restaurant_latitude':[self.Restaurant_latitude],
+                'Restaurant_longitude':[self.Restaurant_longitude],
+                'Delivery_location_latitude':[self.Delivery_location_latitude],
+                'Delivery_location_longitude':[self.Delivery_location_longitude],
+                'Vehicle_condition':[self.Vehicle_condition],
                 'Weather_conditions':[self.Weather_conditions],
                 'Road_traffic_density':[self.Road_traffic_density],
                 'City':[self.City]
-            }
+                }
             df = pd.DataFrame(custom_data_input_dict)
             logging.info('Dataframe Gathered')
             return df
         except Exception as e:
             logging.info('Exception Occured in prediction pipeline')
             raise CustomException(e,sys)
+        
